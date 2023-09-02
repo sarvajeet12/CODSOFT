@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tag -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" title="text/css" href="Calculator Project.css">
+
+    <!-- Title -->
+    <title>Calculator Project</title>
+</head>
+<body>
+    <!-- Container -->
+    <div id="container">
+        <!-- Calculator Heading -->
+        <div id="Calculator_heading"><h1>CALCULATOR</h1></div>
+
+        <!-- Form contanier -->
+        <div id="Form_container">
+
+            <!-- Form -->
+            <form  name="calcultor">
+                <!-- Text Box: Output Screeen -->
+                <input type="text" id="text_box" name="text_box">
+
+                <br>
+                <!-- Clear Text -->
+                <input type="reset" id="reset" name="reset" value="Clear">
+
+                <br>
+
+                <div id="operator_nunmber">
+                <!-- Number and operation button -->
+
+                    <input type="button" name="btn_1" id="btn_1" value="1" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_2" id="btn_2" value="2" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_3" id="btn_3" value="3" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_+" id="btn_+" value="+" class="oper_num" onclick="btnclick(this.value)">
+                    
+                    <input type="button" name="btn_4" id="btn_4" value="4" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_5" id="btn_5" value="5" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_6" id="btn_6" value="6" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_-" id="btn_-" value="-" class="oper_num" onclick="btnclick(this.value)">
+                    
+                    <input type="button" name="btn_7" id="btn_7" value="7" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_8" id="btn_8" value="8" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_9" id="btn_9" value="9" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_x" id="btn_x" value="x" class="oper_num" onclick="btnclick(this.value)">
+                    
+                    <input type="button" name="btn_0" id="btn_0" value="0" class="oper_num" onclick="btnclick(this.value)">
+                    <input type="button" name="btn_=" id="btn_equal" value="=" class="oper_num" onclick="calculator()">
+                    <input type="button" name="btn_/" id="btn_/" value="/" class="oper_num" onclick="btnclick(this.value)">
+                </div> 
+            </form>
+        </div>
+    </div>
+
+    <!-- C-nnecting JS -->
+    <script src="Calculator Project.js"></script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" type="text/css" href="../checkFindCSS/checkFind.css">
+    <!-- Title -->
+    <title>Check Vowel Or Consonant</title>
+</head>
+<body>
+    <div id="back">
+        <h4><a href="/projects/Check & Find/index.html">BACK</a></h4>
+    </div>
+    <div id="heading">
+        <h1>Check Alphabet Is A Vowel Or Consonant</h1>
+    </div>
+    <div id="container">
+        <div id="content">
+            <h3>Enter Alphabet</h3>
+            <input type="text" id="text-box" placeholder="Enter Alphabet">
+            <button onclick="check()">Check</button>
+            <input type="text"  id="result" placeholder="Result">
+        </div>
+    </div>
+
+    <!-- Connecting JS -->
+    <!-- <script src="Check Character.js"></script> -->
+    <script>
+        function check(){
+             
+            let enter_number = document.getElementById("text-box").value;
+
+            // Logic
+            if((enter_number=='a') || (enter_number=='e') || (enter_number=='i') || (enter_number=='o') || (enter_number=='u'))
+            {
+                document.getElementById("result").value = `${enter_number} is a vowel`;
+            }
+            else if ((enter_number=='A') || (enter_number=='E') || (enter_number=='I') || (enter_number=='O') || (enter_number=='U'))
+            {
+                document.getElementById("result").value = `${enter_number} is a vowel`;
+            }
+            else if(
+                (enter_number=='b') || (enter_number=='c') || (enter_number=='d') || (enter_number=='f') || (enter_number=='g') || (enter_number=='h') ||
+                (enter_number=='j') || (enter_number=='k') || (enter_number=='l') || (enter_number=='m') || (enter_number=='n') || (enter_number=='p') ||
+                (enter_number=='q') || (enter_number=='r') || (enter_number=='s') || (enter_number=='t') || (enter_number=='v') || (enter_number=='w') ||
+                (enter_number=='x') || (enter_number=='y') || (enter_number=='z')
+            ){
+                document.getElementById("result").value = `${enter_number} is a consonant`;
+            }
+            else if(
+                (enter_number=='B') || (enter_number=='C') || (enter_number=='D') || (enter_number=='F') || (enter_number=='G') || (enter_number=='H') ||
+                (enter_number=='J') || (enter_number=='K') || (enter_number=='L') || (enter_number=='M') || (enter_number=='N') || (enter_number=='P') ||
+                (enter_number=='Q') || (enter_number=='R') || (enter_number=='S') || (enter_number=='T') || (enter_number=='V') || (enter_number=='W') ||
+                (enter_number=='X') || (enter_number=='Y') || (enter_number=='Z')
+            ){
+                document.getElementById("result").value = `${enter_number} is a consonant`;
+            }
+            else if('0'<=enter_number && enter_number<='9')
+            {
+                document.getElementById("result").value = 'It is not a alphabet';
+            }else{
+                document.getElementById("result").value = 'It is not a alphabet';
+            }
+        }
+    </script>
+</body>
+</html>

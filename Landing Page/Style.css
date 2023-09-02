@@ -1,0 +1,547 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+#container{
+    width: 100%;
+    position: relative;
+}
+
+/* Start : 1. Header container */
+
+#header-container{
+    background-image: url('./images/headerImageMountaine.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+    height: 600px;
+    padding: 20px 40px;
+}
+
+.list{
+    list-style-type: none;
+    margin-left: 70px;
+    font-weight: bold
+}
+
+.list .list-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.list .list-link:hover{
+    color: #00cec9;
+}
+
+.btn{
+    border: none;
+    background-color: #00cec9;
+    height: 35px;
+    width: 100px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #00cec9;
+}
+
+#hamMenu{
+   display: none;
+}
+
+
+/* Media Query */
+@media only screen and (min-width: 768px) and (max-width : 991px)
+{
+    .list{
+        margin-left: 50px;
+    }
+    .list-link{
+        font-size: 10px;
+    }
+    #adv-heading{
+        font-size: 20px;
+    }
+
+    #btn{
+        font-size: 13px;
+        width: 80px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width : 767px)
+{
+  #list-box{
+    margin-top: 12px;
+    background-color: #00cec9; 
+    position: absolute;
+    top: 50px;
+    right: 0px; 
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    padding-right: 50px;
+  }
+
+  .list{
+    margin-top: 10px;
+  }
+  #btn{
+    margin-top: -5px;
+  }
+  #hamMenu{
+    display: block;
+  }
+}
+
+/* End : Header container */
+
+/* Start : 2. Upcoming Event */
+
+#upcoming-event{
+    padding-top: 50px;
+}
+
+.upcomingEventImage{
+    cursor: pointer;  
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.upcomingEventImage:hover{
+    transform: scale(1.2,1.2);
+}
+
+.upcomingEventBtn{
+    border: 2px solid #00cec9;
+}
+
+/* Media Query */
+@media only screen and (min-width: 1400px) and (max-width : 1500px) {
+    #dist-upcomingEvent{
+        width: 62% !important;
+    } 
+}
+
+@media only screen and (min-width: 1200px) and (max-width : 1399.5px) {
+    #dist-upcomingEvent{
+        width: 72% !important;
+    } 
+}
+
+@media only screen and (min-width: 992px) and (max-width : 1199px) {
+    #dist-upcomingEvent{
+        width: 88% !important;
+    } 
+}
+
+@media only screen and (min-width: 768px) and (max-width : 991.5px) {
+    #dist-upcomingEvent{
+        width: 86% !important;
+    } 
+
+    .upcomingEventImage{
+        height: 200px !important;
+        width: 300px !important;
+    }
+
+    .para-upcomingEvent{
+        font-size: 10px !important;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width : 767.5px) {
+    #dist-upcomingEvent{
+       flex-direction: column;
+    } 
+
+    #upcoming-event{
+        height: 63%;
+        padding-top: 5%;
+        margin-bottom: 25px;
+    }
+    #container{
+        height: 1610px;
+    }
+
+    #upcomingEvent{
+        margin-top: 40px;
+    }
+
+    #a-wonderful-gift{
+        font-size: 40px !important;
+    }
+
+    #heading-upcomingEvent{
+        margin-bottom: 30%;
+    }
+
+    .upcomingEvent-Img{
+        margin-top: 40px;
+    } 
+
+}
+
+@media only screen and (max-width: 575.5px){
+    #dist-upcomingEvent{
+       flex-direction: column;
+    } 
+
+    #upcoming-event{
+        height: 63%;
+        padding: 5%;
+        
+    }
+    #container{
+        height: 1610px;
+    }
+
+    .upcomingEvent-Img{
+        margin-top: 40px;
+    } 
+
+    #a-wonderful-gift{
+        font-size: 30px !important;
+    }
+
+    #explore-heading{
+        font-size: 20px !important;
+    }
+
+    #heading-upcomingEvent{
+        margin-bottom: 55%;
+    }
+}
+
+/* End : Upcoming Event */
+
+/* Start : 3. Explore the world */
+
+#explore-the-world{ 
+    height: 600px;
+    background-image: url('./images/explorTheWorld.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#explore-the-world-content{
+    display: flex; justify-content: center; align-items: center; flex-direction: column; 
+    width: 60%; height: 40%;
+}
+
+/* Media Query */
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    #explore-the-world-content{
+        margin: 30px 0px 0px 100px;
+        padding-top: 100px;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767.5px){
+    #explore-the-world-content{
+        margin: 100px 0px 0px 0px;
+        padding-top: 100px;
+        width: 100%;
+    }
+
+    #heading-explore-the-world{
+        font-size: 30px !important;
+    }
+
+    #para-explore-the-world{
+        font-size: 12px !important;
+        padding: 0px 10px;
+        margin-left: 10px;
+    }
+}
+
+/* End : Explore the world */
+
+/* Start : 4. Upcoming Tours & Destination */
+
+#upcoming-destionation{
+    padding: 70px 0px;
+    display: flex; justify-content: center; align-items: center;
+}
+
+#content-box-upcoming-destination{
+    width: 60%;
+    display: flex; justify-content: space-between;
+   
+}
+
+.upcomingImages{
+
+    cursor: pointer;  
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.upcomingImages:hover{
+    transform: scale(1.1,1.1);
+}
+
+/* Media Query */
+@media only screen and (min-width: 1400px) and (max-width: 1500px)
+{
+  .upcoming-images-box{
+        width: 430px;
+  }
+  
+  #content-box-upcoming-destination{
+    width: 65%;
+  }
+ 
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399.5px)
+{
+  .upcoming-images-box{
+    width: 430px;
+  }
+
+  #content-box-upcoming-destination{
+    width: 75%;
+  }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199.5px)
+{
+  .upcoming-images-box{
+        width: 430px;
+  }
+
+  #content-box-upcoming-destination{
+    width: 92%;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991.5px)
+{
+  .upcoming-images-box{
+    width: 330px;
+  }
+
+  #content-box-upcoming-destination{
+    width: 95%;
+  }
+
+  .upcomingImages{
+    height: 100px;
+    width: 150px;
+  }
+
+  #para-upcoming{
+    font-size: 10px !important;
+  }
+  
+  #upcoming-imageBox{
+    margin-top: 20px;
+  }
+
+  #heading-upcoming-destination{
+    font-size: 22px;
+  }
+ 
+} 
+
+@media only screen and (min-width: 576px) and (max-width: 767.5px)
+{
+    #content-box-upcoming-destination{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .upcoming-images-box{
+        width: 435px;
+      }
+
+    #para-upcoming{
+    font-size: 12px !important;
+    }
+
+    #upcoming-heading-para-btn-box{
+        width: 100% !important;
+    }
+
+    #upcoming-imageBox{
+        width: 100% !important;
+        padding-left: 0px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    #upcomingBtn{
+        height: 30px;
+    }
+
+    #upcoming-destionation{
+        padding-top: 25px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 575.5px)
+{
+    #content-box-upcoming-destination{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .upcoming-images-box{
+        width: 230px;
+      }
+
+    #para-upcoming{
+    font-size: 9px !important;
+    }
+
+    #upcoming-heading-para-btn-box{
+        width: 100% !important;
+    }
+
+    #upcoming-imageBox{
+        width: 100% !important;
+        padding-left: 0px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    #upcomingBtn{
+        height: 30px;
+    }
+
+    #upcoming-destionation{
+        padding-top: 25px;
+    }
+
+    .upcomingImages{
+        width: 100px;
+        height: 50px;
+    }
+
+    #heading-upcoming-destination{
+        font-size: 20px;
+    }
+}
+
+/* End : Upcoming Tours & Destination */
+
+/* Start: Contact */
+/* #contact{
+    border: 1px solid red;
+} */
+
+
+#contact #form-section{
+    /* border: 1px solid fuchsia; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#contact #form-section form{
+    /* border: 1px solid darkred; */
+    width: 70%;
+    padding: 3% 3% 4% 3%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="email"]{
+    width: 100%;
+    height: 35px;
+    padding: 0px 1%;
+}
+
+textarea{
+    padding: 1%;
+    resize: none;
+}
+
+#button{
+    /* border: 1px solid rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+input[type="button"]{
+    width: 25%;
+    height: 35px;
+    color: #fff;
+    background-color: #00cec9;
+    font-weight: bold;
+    border: 2px solid #00cec9;
+    border-radius: 20px;
+}
+
+
+
+input[type="button"]:hover{
+    border: 2px solid #00cec9;
+    background-color: #fff;
+    color: #00cec9;
+}
+
+input[type="email"], textarea, #button{
+    margin-top: 3%;
+}
+
+@media only screen and (min-width: 575px) and (max-width: 768px)
+{
+    #contact #form-section{
+        margin-top: -150px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 575px)
+{
+    #contact #form-section{
+        margin-top: -200px; 
+    }
+}
+/* End : Contact */
+
+
+
+/* Start : 6. Footer */
+
+/* Media Query */
+@media only screen and (min-width: 0px) and (max-width: 768px)
+{
+    #footer{
+       padding-left: 15px !important;
+       padding-right: 15px !important;
+    }
+}
+
+/* End : footer */

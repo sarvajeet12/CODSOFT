@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" type="text/css" href="../checkFindCSS/checkFind.css">
+    <!-- Title -->
+    <title>Check Perfect Number</title>
+</head>
+<body>
+    <div id="back">
+        <h4><a href="/projects/Check & Find/index.html">BACK</a></h4>
+    </div>
+    <div id="heading">
+        <h1>Check Number Is Perfect Or Not</h1>
+    </div>
+    <div id="container">
+        <div id="content">
+            <h3>Enter Number</h3>
+            <input type="number" id="text-box" placeholder="Enter Number">
+            <button onclick="check()">Check</button>
+            <input type="text"  id="result" placeholder="Result">
+        </div>
+    </div>
+
+    <!-- Connecting JS -->
+    <!-- <script src="Check Character.js"></script> -->
+    <script>
+        function check(){
+            let num1, sum =0;
+            let enter_num = document.getElementById("text-box");
+            let num = enter_num.value;
+            num1 = num;
+            for(let i = 1; i<num; i++){
+                if(num % i == 0){
+                    sum = sum + i;
+                }
+            }
+            if(num1 == sum){
+                document.getElementById("result").value = "Perfect Number";
+            }else{
+                document.getElementById("result").value = "Not Perfect Number";
+            }
+        }
+    </script>
+</body>
+</html>

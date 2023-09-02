@@ -1,0 +1,140 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #00cec9;
+}
+
+/* Container */
+#container{
+   height: 100%;
+
+}
+
+/* Heading : div box*/
+#Calculator_heading{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    padding: 20px;
+    
+}
+
+/* Heading text */
+h1{
+    font-size: 70px;
+    color: white;
+}
+
+/* Form container */
+#Form_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    /* border: 1px solid red; */
+    padding: 20px;
+
+}
+
+form{
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Text box */
+#text_box{
+    width: 300px;
+    height: 50px;
+    outline: none;
+    font-size: 16px;
+    padding-left: 5px;
+    border: 0px;
+}
+
+/* Reset or clear */
+#reset{
+    width: 300px;
+    height: 50px;
+    border: 0px;
+    font-size: 16px;
+    background-color: #e84393;
+    color: white;
+    cursor: pointer;
+    
+}
+
+/*  Operator and numbers :background color */
+#operator_nunmber{
+    background-color: #2c3e50;
+    width: 300px;
+    display: flex;
+    justify-content: space-;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/* Operatro and number: style */
+.oper_num{
+    width: 25%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #2c3e50;
+    color: white;
+    border: 0px;
+    
+}
+
+/* Hover Effect on number and operator button */
+.oper_num:hover{
+    background-color: #34495e;
+    cursor: pointer;
+}
+
+/* Hover Effect on reset button */
+#reset:hover{
+    background-color: #fd79a8; 
+}
+
+/* Equal (=) : width increase*/
+#btn_equal{
+    width: 50%;
+}
+
+@media (max-width: 550px){
+    h1{
+        font-size: 50px;
+    }
+    #Calculator_heading{
+        height: 50px;
+    }
+}
+
+@media (max-width: 400px){
+    h1{
+        font-size: 30px;
+    }
+    #Calculator_heading{
+        height: 50px;
+    }
+}
+
+
+@media (max-width: 350px){
+
+    #text_box, #reset, #operator_nunmber{
+        width: 250px;
+    }
+    #Calculator_heading{
+        height: 50px;
+    }
+}

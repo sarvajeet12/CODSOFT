@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" type="text/css" href="../checkFindCSS/checkFind.css">
+    <!-- Title -->
+    <title>Check Odd Even</title>
+</head>
+<body>
+    <div id="back">
+        <h4><a href="/projects/Check & Find/index.html">BACK</a></h4>
+    </div>
+    <div id="heading">
+        <h1>Check Number Is Even Or Odd</h1>
+    </div>
+    <div id="container">
+        <div id="content">
+            <h3>Enter Number</h3>
+            <input type="number" id="text-box" value="0">
+            <button onclick="check()">Check</button>
+            <input type="text"  id="result" placeholder="Result">
+        </div>
+    </div>
+
+    <!-- Connecting JS -->
+    <!-- <script src="Check Character.js"></script> -->
+    <script>
+        function check(){
+            // enter_number is a variable which store value written inside even-odd-text-box (user enter value)
+            let enter_number = document.getElementById("text-box").value;
+            console.log(enter_number);
+
+            // Logic
+
+            // Apply even odd basic concept
+            let rem = enter_number % 2;
+
+            // Conditions
+            if(rem==0){
+                // Result comes in result text box
+                document.getElementById("result").value =`${enter_number} is even number`;
+            }
+            else{
+                // Result comes in result text box
+                document.getElementById("result").value =`${enter_number} is odd number`;
+            }
+        }
+    </script>
+</body>
+</html>

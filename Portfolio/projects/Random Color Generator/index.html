@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Random Color Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="generator">
+            <h3>Random Color Generator</h2>
+            <h2 id="color-code">#ffffff</h2>
+            <button onclick="getColor()">Click Me</button>
+            <h4 id="copy">Color Code Copied</h4>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+            const getColor = () =>{
+            let hexColor = `#${Math.random().toString(16).slice(2,8).padEnd(6,0)}`;
+
+            // set the hexColor on body background
+            document.body.style.backgroundColor = hexColor;
+
+            document.getElementById('color-code').innerText = hexColor;
+
+            //code : copy the color code
+            navigator.clipboard.writeText(hexColor);
+
+            // code : msg of color code copy
+            let copy = document.getElementById('copy');
+            copy.style.color = hexColor;
+        
+
+            
+            //console.log(hexColor);
+            //alert("button was clicked...")
+        }
+
+        // Initial call(when page was load)
+        getColor();
+    </script>
+</body>
+</html>

@@ -1,0 +1,639 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    outline: none;
+    list-style-type: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #111;
+    padding-left: 350px;
+}
+
+.section{
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 50px;
+    border: none;
+}
+.btn:hover{
+    background-color: #FDCA33;
+}
+
+.heading{
+    text-align: center;
+    border-bottom: 2px solid #fff4;
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.heading span{
+    color: #FDCA33;
+}
+
+/* ------------------------------side bar---------------------------- */
+/* parent */
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 350px;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    /* border: 1px solid red; */
+    text-align: center;
+    transition: 1s all ease-in-out;
+}
+/* --------------------user---------------------------- */
+#sidebar #user img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 15px;
+    border: 5px solid #FDCA33;
+}
+
+#sidebar #user h3{
+    font-size: 23px;
+    color: #fff;
+}
+
+#sidebar #user p{
+    font-size: 12px;
+    color: #fff;
+}
+
+/* -------------menul list------------------- */
+
+#sidebar #menulist{
+    /* border: 1px solid fuchsia; */
+    width: 100%;
+}
+
+#sidebar #menulist ul{
+    /* border: 1px solid brown; */
+    padding: 30px;
+}
+
+#sidebar #menulist ul li a{
+    display: block;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+#sidebar #menulist ul li a:hover, #sidebar #social-icon li a:hover{
+    background-color: #FDCA33;
+}
+
+/*----------- social media icon ---------------------*/
+/* #sidebar #social-icon {
+    border: 1px solid yellow;
+} */
+
+#sidebar #social-icon ul{
+    display: flex;
+}
+
+#sidebar #social-icon li a{
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0px 10px;
+}
+
+#sidebar #social-icon li a img{
+    width: 45px;
+    height: 45px;
+}
+
+
+
+/* -----------------------------side bar------------------------------- */
+
+/* ---------------------------start : humber menu --------------------*/
+
+#humbergur-menu{
+    position: fixed;
+    top: 10px; right: 10px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 3px 5px;
+    z-index: 999;
+    display: none;
+}
+
+/* ---------------------------End : humber menu --------------------*/
+
+/*------------------------------- Start home ------------------------ */
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    /* border: 1px solid red; */
+    padding: 0px 100px;
+}
+
+.home h2{
+    color: #fff;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.home h2 span{
+    color: #FDCA33;
+}
+
+.home h4{
+    color: #fff;
+}
+
+.home p{
+    font-size: 12px; 
+    color: white; 
+    line-height: 20px; 
+    letter-spacing: 1px;
+    /* border: 1px solid fuchsia; */
+    padding: 5px 0px;
+}
+/* ------------------Text Animation----------------------- */
+
+.text-animation {
+    /* border: 1px solid red; */
+    overflow: hidden;
+    width: 246px;
+    margin-top: 10px;
+}
+
+.text-animation .text {
+    position: relative;
+    color: #FDCA33;
+    /* You can change size , no effect on animation */
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-animation .text.first-text {
+    color: #fff;
+}
+
+.text.sec-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0F110E;
+    border-left: 2px solid #FDCA33;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+
+    40%,
+    60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+/* ------------------End : Text Animation-------------------------- */
+
+/*------------------------------- End home ------------------------ */
+
+/*------------------------------- About ------------------------ */
+/* .about{
+    border: 1px solid red;
+} */
+
+/* also used  in skills  */
+#about-para{
+    color: #fff;
+    font-size: 14px;
+    padding: 50px;
+    text-align: center;
+}
+
+#details{
+    /* border: 1px solid fuchsia; */
+    display: flex; flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#details p{
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 15px;
+    margin: 40px 40px;
+    color: #000;
+
+}
+
+.about div:last-child{
+    display: flex; justify-content: center;align-items: center;
+    padding: 50px;
+}
+/*------------------------------- End About ------------------------ */
+
+/*------------------------------- Skills ------------------------ */
+
+/* parrent of skills */
+/* .skills{
+    border: 1px solid red;
+} */
+
+#progress{
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#progress .bar{
+    /* 1rem = 16pixels */
+    margin: 20px;
+    /* border: 1px solid brown;   */
+    padding: 3px;
+    background-color: #fff;
+    border-radius: 50px;
+    width: 40%;
+}
+
+#progress .bar h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 5px;
+    background-color: #FDCA33;
+    font-size: 12px;
+    border-radius: 50px;
+}
+
+/* Adjust your skill  */
+#progress .bar:nth-child(1) h3{
+    /* html */
+    width: 95%;
+}
+
+#progress .bar:nth-child(2) h3{
+    /* css */
+    width: 95%;
+}
+
+#progress .bar:nth-child(3) h3{
+    /* js */
+    width: 85%; 
+}
+#progress .bar:nth-child(4) h3{
+    /* Bootstrps */
+    width: 60%;
+}
+#progress .bar:nth-child(5) h3{
+    /* MongoDB */
+    width: 85%;
+}
+#progress .bar:nth-child(6) h3{
+    /* Express js */
+    width: 85%;
+}
+#progress .bar:nth-child(7) h3{
+    /* React js */
+    width: 75%;
+}
+#progress .bar:nth-child(8) h3{
+    /* Nodejs */
+    width: 85%;
+}
+#progress .bar:nth-child(9) h3{
+    /* Photoshop */
+    width: 70%;
+}
+
+/*------------------------------- End Skills ------------------------ */
+
+/*-------------------------------  Education ------------------------ */
+
+/* parrent */
+/* .education{
+    border: 1px solid red;
+} */
+
+.education .educ-details{
+    /* border: 1px solid yellow; */
+    padding: 0px 40px 0px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+.education .educ-details .box{
+    /* border: 1px solid darkgoldenrod; */
+    padding: 50px 30px 20px 40px;
+    margin-top: 20px;
+    width: 70%;
+    background-color: #dfe6e9;
+}
+
+.education .educ-details .box .educ-box{
+    border-left: 2px solid #000;
+    position: relative;
+    padding-left: 30px;
+
+}
+
+.education .educ-details .box .educ-box i{
+    position: absolute;
+    top: -30px;
+    left: -15px;
+    height: 30px; width: 30px;
+    /* height and width is given then use % in border-radius */
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    color: #000;
+    background-color: #FDCA33;
+}
+
+.education .educ-details .box .educ-box span{
+    font-size: 13px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 50px;
+    padding: 3px 30px;
+}
+
+.education .educ-details .box .educ-box h3{
+    font-size: 15px;
+    color: #000;
+    padding-top: 10px;
+}
+
+.education .educ-details .box .educ-box p{
+    font-size: 13px;
+    color: #000;
+    padding-top: 10px;
+}
+
+/*------------------------------- End Education ------------------------ */
+
+/*------------------------------- Projects ------------------------ */
+/* parrent*/
+/* .project{
+    border: 1px solid red;
+} */
+
+.project #project-box{
+    /* border: 1px solid fuchsia; */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.project #project-box .project-example{
+    /* border: 1px solid #FDCA33; */
+    padding: 20px;
+    margin: 20px 20px 0px 0px;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    border-radius: 5px;
+    transition: background-color 0.5s, transform 0.5s;
+    background-color: #333;
+}
+
+.project #project-box .project-example:hover{
+    background-color: #FDCA33;
+    transform: translateY(-15px);
+}
+
+.project #project-box .project-example:hover .projectBtn{
+    background-color: #333;
+}
+
+.project #project-box .project-example h4,p{
+    color: #000;
+    font-weight: bold;
+}
+
+.project #project-box .project-example p{
+    margin-top: 15px;
+}
+
+.project #project-box .project-example a button{
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projectBtn{
+    padding: 10px 20px;
+    background-color: #FDCA33;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 50px;
+    border: none;
+}
+/* images in projects */
+#number-system{
+    background-image: url('../images/numbersystem.jpg');
+}
+#check-find{
+    background-image: url('../images/checkfind.jpg');
+}
+#random-color-generator{
+    background-image: url('../images/randomcolorgenerator.jpg');
+}
+#quote{
+    background-image: url('../images/quotes.jpg');
+}
+#weather{
+    background-image: url('../images/weather.jpg');
+}
+#age-calc{
+    background-image: url('../images/agecalc.jpg');
+}
+#tic-tac-toe{
+    background-image: url('../images/tictactoe.jpg');
+}
+#calc{
+    background-image: url('../images/calc.jpg');  
+}
+
+#number-system, #check-find, #random-color-generator, #quote, #weather, #age-calc, #tic-tac-toe,#calc{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+/*------------------------------- End Projects ------------------------ */
+
+/*------------------------------- Contact ------------------------ */
+/* .contact{
+    border: 1px solid red;
+} */
+
+/* #form-box{
+    border: 1px solid yellow;
+} */
+
+.contact #form-box form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.contact #form-box form input[type="text"],.contact #form-box form input[type="email"], textarea{
+    width: 80%;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+}
+
+.contact #form-box form input[type="text"],.contact #form-box form input[type="email"]{
+    height: 40px;
+    padding: 0px 10px;
+}
+.contact #form-box form input[type="email"], textarea{
+    margin-top: 20px;
+}
+
+textarea{
+    height: 200px;
+    resize: none;
+    padding: 10px 10px;
+}
+
+input[type="submit"]{
+    margin-top: 30px;
+}
+
+::placeholder{
+    color: #fff;
+    opacity: 0.5;
+}
+
+/* copyright */
+#copyright{
+    margin-top: 50px;
+    background-color: #FDCA33;
+    padding: 1%;
+    text-align: center;
+    color: black;
+}
+/*------------------------------- End Contact ------------------------ */
+
+/*------------------------ Media query ----------------- */
+
+
+@media (max-width : 1200px){
+    .home{
+        padding: 15px 50px;
+    }
+}
+@media (max-width : 991px){
+    #sidebar{
+        left: -100%
+    }
+
+    #humbergur-menu{
+        display: block;
+    }
+
+    #sidebar.active{
+        left: 0%;
+    }
+    body{
+        padding: 0;
+    }
+}
+
+@media (max-width : 400px){
+    #sidebar{
+       width: 100vw;
+    }
+
+    .education .educ-details .box{
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .education .educ-details .box .educ-box h3{
+        font-size: 13px;
+    }
+    
+    .education .educ-details .box .educ-box p{
+        font-size: 10px;
+    }
+
+    .education .educ-details .box .educ-box{
+        padding-left: 15px;
+    
+    }
+}
+
+@media (max-width : 483px){
+    #progress .bar{
+        width: 100%;
+    }
+}
+
+@media (max-width : 560px){
+    .project #project-box .project-example{
+        width: 100%;
+    }
+}
+/*----------------------End :  Media query ----------------- */
+
+

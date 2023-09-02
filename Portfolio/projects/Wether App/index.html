@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div id="container">
+        <div id="heading">
+            <h1>Weather App</h1>
+        </div>
+        <div id="form-box">
+            <form>
+                <input type="text" id="city" placeholder="Enter City Name" required>
+                <input type="submit" value="Get Weather" onclick="getWeather()">
+            </form>
+            <div id="result-box">
+                <p id="result">Hello Weather App</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+        //api key : 3794adbffbc9750dac0ccc309ecb8afa
+
+        const getWeather = async ()=>{
+           try{
+                event.preventDefault();   //prevent from refresh the page
+                let city = document.getElementById("city").value;
+
+                let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3794adbffbc9750dac0ccc309ecb8afa`;
+                
+                let result = await fetch(url);
+                result = await result.json();
+                let temp = result.main.temp - 273.15;
+                temp = temp.toFixed(2);
+                document.getElementById("result").innerText = `Weather in ${city} is ${temp} Celcius`;
+           }catch(error){
+                document.write(error);  
+           }
+        }      
+    </script>
+</body>
+</html>

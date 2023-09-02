@@ -1,0 +1,64 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" type="text/css" href="../checkFindCSS/checkFind.css">
+    <!-- Title -->
+    <title>Find Factorial</title>
+</head>
+<body>
+    <div id="back">
+        <h4><a href="/projects/Check & Find/index.html">BACK</a></h4>
+    </div>
+    <div id="heading">
+        <h1>Check Whole Number Is Factorial Or Not</h1>
+    </div>
+    <div id="container">
+        <div id="content">
+            <h3>Enter Number</h3>
+            <input type="number" id="text-box" value="0">
+            <button onclick="check()">Check</button>
+            <input type="text"  id="result" placeholder="Result">
+        </div>
+    </div>
+
+    <!-- Connecting JS -->
+    <!-- <script src="Check Character.js"></script> -->
+    <script>
+        function check(){
+             
+            let i,enter_number,fac=1;
+
+            // enter_number is a variable which store value written inside factorial-text-box (user enter value)
+            enter_number = document.getElementById("text-box").value;
+
+            // Logic  : 5! = 5x4x3x2x1 = 120
+
+            //for loop
+            for(i=1;i<=enter_number;i++)
+            {
+                fac=fac*i;
+            }
+
+            document.getElementById("result").value =`${fac}`;
+
+
+            // If Conditions  : Factorial of 0
+
+            if(enter_number==0){
+                // Result comes in result text box
+                document.getElementById("result").value =`1`;
+            }
+
+            if(enter_number<0){
+                // Result comes in result text box
+                document.getElementById("result").value ='Invalid : Enter Whole Number';
+            }
+        }
+    </script>
+</body>
+</html>

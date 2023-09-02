@@ -1,0 +1,79 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" type="text/css" href="../checkFindCSS/checkFind.css">
+    <!-- Title -->
+    <title>Find Anagram</title>
+</head>
+<body>
+    <div id="back">
+        <h4><a href="/projects/Check & Find/index.html">BACK</a></h4>
+    </div>
+    <div id="heading">
+        <h1>Check Word Anagram Or Not</h1>
+    </div>
+    <div id="container">
+        <div id="content">
+            <h3>Enter First Word</h3>
+            <input type="text" id="text-box" placeholder="Enter Word" required>
+            <h3 id="box2-heading">Enter Second Word</h3>
+            <input type="text" id="text-box2" placeholder="Enter Word" required>
+            <button onclick="check()">Check</button>
+            <input type="text"  id="result" placeholder="Result" >
+        </div>
+    </div>
+
+    <!-- Connecting JS -->
+    <!-- <script src="Check Character.js"></script> -->
+    <script>
+        function check(){
+            
+            let firstString = document.getElementById("text-box").value;
+            let secondString = document.getElementById("text-box2").value;
+
+
+
+            // Logic
+
+            // first String Concept
+
+            // String Convert into array
+            let array1 = firstString.split('');
+
+            // Sorting 
+            array1.sort();
+
+            // Remove bracket, comma, double quote
+            let arr1 = array1.join("");
+
+
+
+            // Second String Concept
+
+            // String Convert into array
+            let array2 = secondString.split('');
+
+            // Sorting 
+            array2.sort();
+
+            // Remove bracket, comma, double quote
+            let arr2 = array2.join("");
+
+            
+
+            if(arr1 == arr2)
+            {
+                document.getElementById("result").value = `${firstString} and ${secondString} are an anagram of each other`;
+            }
+            else{
+                document.getElementById("result").value=`${firstString} and ${secondString} are not an anagram of each other`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" href="../numbSys/numStyle/num.css">
+    <title>Octal To Decimal</title>
+</head>
+<body>
+    <div class="container">
+        <!-- home -->
+        <div id="home"><a href="../index.html">Home</a></div>
+
+        <!-- heading -->
+        <div id="heading"><h1>Octal To Decimal</h1></div>
+
+        <!-- main -->
+        <div id="main-box">
+            <div id="main">
+                <h3>Enter Octal Number</h3>
+                <input type="text" name="text-box" id="text-box" placeholder="Octal Number">
+                <button onclick="octalToDecimal()">Convert</button>
+                <input type="text" name="text-box" id="result" placeholder="Result">
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+       
+        function octalToDecimal()
+        {
+             let binBox = document.getElementById("text-box").value;
+             let result = parseInt(binBox,8);  // paseInt() Method convert into decimal number
+             document.getElementById("result").value = result;                                               
+        }                                                                                                                                            
+     </script>
+</body>
+</html>

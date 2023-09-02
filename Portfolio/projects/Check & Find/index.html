@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Check & Find</title>
+</head>
+<body>
+    <div id="container">
+        <div id="heading"><h1>Check And Find</h1></div>
+        <div id="main-box">
+            <div class="box">
+                <h3>Check Alphabet, Digit And Special Character</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkAlphaDigitSpec/checkADS.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Vowel And Consonant</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkVolConsonant/checkVolCon.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Number Is Even Or Odd</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkEvenOdd/evenOdd.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Leap Year</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkLeapYear/leapYear.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Prime Number</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkPrime/checkPrime.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Palindrome Or Not</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkPalindrome/palindrome.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Find Factorial</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/findFactorial/findFactorial.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Find Power</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/findPower/findPower.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Find HCF Or GCD Or GCF</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/findHCF/findHCF.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Find LCM</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/findLCM/findLCM.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Find Square || Square Root || Cube || Cube Root</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/squareCube/squareCube.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Armstrong Number</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkArmstrongNum/checkArmsNum.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Perfect Number</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkPerfectNum/checkPerfectNum.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Fibonacci Term</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkFiboTerm/checkFiboTerm.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Anagram</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkAnagram/checkAnagram.html"><button>Check</button></a>
+            </div>
+            <div class="box">
+                <h3>Check Pangram</h3>
+                <p>HTML CSS JS</p>
+                <a href="./checkAndFind/checkPangram/checkPangram.html"><button>Check</button></a>
+            </div>
+            <!-- 16 boxes -->
+        </div>
+        <div id="load-more"><button>Load More</button></div>
+    </div>
+
+    <!-- JS -->
+    <script>
+        let loadBtn = document.getElementById("load-more");
+        let currentItem = 4;  //no.of boxes in a row
+        loadBtn.onclick = () =>{
+            let boxes = [...document.getElementsByClassName('box')]; // in array [all boxes come]
+            console.log(boxes)
+            for(let i = currentItem; i < currentItem + 4; i++){
+                boxes[i].style.display = 'block';
+            }
+            currentItem +=4;
+            if(currentItem >= boxes.length){
+                loadBtn.style.display = 'none';
+            }
+        } 
+    </script>
+</body>
+</html>

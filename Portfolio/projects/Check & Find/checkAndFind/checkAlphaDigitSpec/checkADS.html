@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" type="text/css" href="../checkFindCSS/checkFind.css">
+    <!-- Title -->
+    <title>Check Alpha Digit Special</title>
+</head>
+<body>
+    <div id="back">
+        <h4><a href="/projects/Check & Find/index.html">BACK</a></h4>
+    </div>
+    <div id="heading">
+        <h1>Check Character Is Alphabet Or Digit Or Special Character</h1>
+    </div>
+    <div id="container">
+        <div id="content">
+            <h3>Enter Character</h3>
+            <input type="text" id="text-box" placeholder="Enter Character">
+            <button onclick="check()">Check</button>
+            <input type="text"  id="result" placeholder="Result">
+        </div>
+    </div>
+
+    <!-- Connecting JS -->
+    <!-- <script src="Check Character.js"></script> -->
+    <script>
+        function check(){
+            let enter_charcter = document.getElementById("text-box").value;
+            console.log(enter_charcter);
+
+            // Logic
+            if(('a'<=enter_charcter && enter_charcter<='z') || ('A'<=enter_charcter && enter_charcter<='Z'))
+            {
+                document.getElementById("result").value = `${enter_charcter} is a alphabet`;
+            }
+            else if('0'<=enter_charcter && enter_charcter<='9')
+            {
+                document.getElementById("result").value = `${enter_charcter} is a dgit`;
+            }
+            else{
+                if(enter_charcter == '' || enter_charcter == ' '){
+                    document.getElementById("result").value = `space is a special character`;
+                }else{
+                    document.getElementById("result").value = `${enter_charcter} is a special character`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

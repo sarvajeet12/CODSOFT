@@ -1,0 +1,67 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" type="text/css" href="../checkFindCSS/checkFind.css">
+    <!-- Title -->
+    <title>Find Power</title>
+</head>
+<body>
+    <div id="back">
+        <h4><a href="/projects/Check & Find/index.html">BACK</a></h4>
+    </div>
+    <div id="heading">
+        <h1>Find Power Of A Number</h1>
+    </div>
+    <div id="container">
+        <div id="content">
+            <h3>Enter Base</h3>
+            <input type="number" id="text-box" value="0">
+            <h3 id="box2-heading">Enter Exponent</h3>
+            <input type="number" id="text-box2" value="0">
+            <button onclick="check()">Check</button>
+            <input type="text"  id="result" placeholder="Result">
+        </div>
+    </div>
+
+    <!-- Connecting JS -->
+    <!-- <script src="Check Character.js"></script> -->
+    <script>
+        function check(){
+            let i,enter_number_base,enter_number_expo,pow=1;
+
+            // enter_number is a variable which store value written inside prime-text-box (user enter value)
+            enter_number_base = document.getElementById("text-box").value;
+            enter_number_expo = document.getElementById("text-box2").value;
+
+            // Logic : For example :: 2 to the power 5 ==> 2x2x2x2x2 = 32
+
+            //for loop
+
+            if((enter_number_expo==0) && (enter_number_base == 0))
+            {
+                document.getElementById("result").value = "Indeterminant Form";
+            }else if(enter_number_expo>0){
+                for(i=1;i<=enter_number_expo;i++)  //Loop run five times
+                {
+                    pow=pow*enter_number_base;
+                }
+
+                //GET
+                document.getElementById("result").value =`${pow}`;
+            }else{
+                if(enter_number_expo==0){
+                    document.getElementById("result").value ='1';
+                }else{
+                    document.getElementById("result").value ='Enter Exponent greater than or equal to 0';
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>
